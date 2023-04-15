@@ -16,17 +16,24 @@
     <!-- Custom Content -->
     <link rel="icon" href="assets/images/Site-favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- Custom Script -->
+    <script src="https://kit.fontawesome.com/b1b917e349.js" crossorigin="anonymous"></script>
     <script src="assets/script/index.js"></script>
     <script>fillFeatured()</script>
 </head>
 
 <body>
-    <!-- <script>getAPI()</script> -->
+    <!-- Go Up -->
+    <a id="btn-back-to-top" href="#" class="btn btn-light btn-lg btn-back-to-top" role="button"><i
+            class="fa-solid fa-chevron-up"></i></a>
+
     <section class="colored-section" id="title">
         <div class="container-fluid">
             <!-- Nav Bar -->
             <nav class="navbar navbar-expand-lg navbar-dark">
-                <a class="navbar-brand" href="#">Digivice</a>
+                <a class="navbar-brand d-lg-none" href="#">Digivice</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -37,15 +44,10 @@
                         <li class="nav-item"></li>
                         <a class="nav-link" href="index.html">Inicio</a>
                         <li class="nav-item"></li>
-                        <a class="nav-link" href="listado.html">D-Scan Todos</a>
+                        <a class="nav-link" href="listado.html">Todos los Digimon</a>
                     </ul>
                 </div>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Buscar Digimon" aria-label="Search"
-                        onkeyup="search()">
-                    <a href="search.html" class="btn btn-outline-dark" role="button">Buscar</a>
-                    <!-- <button class="btn btn-outline-dark" type="submit">Buscar</button> -->
-                </form>
+
             </nav>
             <!-- Title -->
             <div class="row">
@@ -98,10 +100,6 @@
 
     </section>
 
-
-
-    <!-- JQUERY -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"

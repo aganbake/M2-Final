@@ -55,9 +55,26 @@ h3 {
   color: white;
 }
 
-/* PAGES  */
+/* TABLE  */
+
+.digimon-table {
+  width: 15%;
+  border-radius: 100%;
+  margin: 20px;
+}
 
 /* CONFIG */
+
+.btn-back-to-top {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  display: none;
+}
+
+.d-flex {
+  gap: 20px;
+}
 
 .digimon-img {
   width: 40%;
@@ -76,6 +93,11 @@ h3 {
     width: 100%;
     border-radius: 100%;
     margin: auto;
+  }
+  .digimon-table {
+    width: 60%;
+    border-radius: 100%;
+    margin: 20px;
   }
   #footer {
     padding: 20%;

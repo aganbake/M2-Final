@@ -16,15 +16,22 @@
     <!-- Custom Content -->
     <link rel="icon" href="assets/images/Site-favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="assets/script/index.js"></script>
-    <script>digimonList()</script>
     <!-- JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-
+    <!-- Custom Script -->
+    <script src="https://kit.fontawesome.com/b1b917e349.js" crossorigin="anonymous"></script>
+    <script src="assets/script/index.js"></script>
+    <script>digimonList()</script>
 </head>
 
 <body>
-    <!-- <script>getAPI()</> -->
+
+    <!-- <button type="button" class="btn btn-light btn-lg" id="btn-back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button> -->
+    <a id="btn-back-to-top" href="#" class="btn btn-light btn-lg btn-back-to-top" role="button"><i
+            class="fa-solid fa-chevron-up"></i></a>
+
     <section class="colored-section" id="title">
         <div class="container-fluid">
             <!-- Nav Bar -->
@@ -40,21 +47,14 @@
                         <li class="nav-item"></li>
                         <a class="nav-link" href="index.html">Inicio</a>
                         <li class="nav-item"></li>
-                        <a class="nav-link" href="listado.html">D-Scan Todos</a>
+                        <a class="nav-link" href="listado.html">Todos los Digimon</a>
                     </ul>
                 </div>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Buscar Digimon" aria-label="Search">
-                    <button class="btn btn-outline-dark" type="submit">Buscar</button>
-                </form>
             </nav>
             <!-- Title -->
             <div class="row">
-                <div class="col-lg-6">
-                    <h1 class="big-heading"></h1>
-                </div>
                 <div class="col-lg-12">
-                    <img src="assets/images/Logo-Digimon.png" alt="Logo-Digimon" class="logo">
+                    <img src="assets/images/Digivice-logo.png" alt="Logo-Digimon" class="logo">
                 </div>
             </div>
         </div>
@@ -63,8 +63,14 @@
     <!-- All Digimons -->
 
     <section class="mid-section">
-        <div class="container-fluid">
-            <table class="table align-middle">
+        <div class="container-fluid table-responsive">
+            <form class="d-flex" role="search">
+                <input class="form-control w-25" type="search" placeholder="Buscar Digimon" aria-label="Search"
+                    id="needDigimon">
+                <button class="btn btn-outline-dark" type="button" onclick="search()">Buscar</button>
+                <button class="btn btn-outline-dark" type="button" onclick="digimonList()">Volver</button>
+            </form>
+            <table class="table align-middle table-striped" data-search="true" data-custom-search="customSearch">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
