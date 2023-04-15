@@ -12,21 +12,21 @@ En Listado podemos ver todos los pokemones además de poder filtrar por nombre
 
 ### Módulos
 
-_[Bootstrap 5.2.3]
-_[JQuery 3.6.3]
-_[FontAwesome]
-_[Google Fonts 'Ubuntu'] \*[Fetch]
+- [Bootstrap 5.2.3]
+- [JQuery 3.6.3]
+- [FontAwesome]
+- [Google Fonts 'Ubuntu'] \*[Fetch]
 
 ### Script
 
 ## Funciones
 
-_[apiCall()] Esta función llama al fetch con la URL de la api y crea 3 digimons al azar para la página de inicio
-_[getDigimon()] Esta función genera un número random
-_[fillFeatured()] Esta función llama 3 veces el número random
-_[digimonList()] Esta función llama al fetch con la URL de la api y genera una lista dinámica en el HTML con todos los Digimons
-_[search()] Esta función se llamada desde listado y llama a la Api pero con el nombre ingresado en el input
-_[createDigimon] Esta función exist en digimonList() y search(), pero con la diferencia que en search, solo crea un Digimon y lo envía a la tabla de bootstrap como "filtro"
+- [apiCall()] Esta función llama al fetch con la URL de la api y crea 3 digimons al azar para la página de inicio
+- [getDigimon()] Esta función genera un número random
+- [fillFeatured()] Esta función llama 3 veces el número random
+- [digimonList()] Esta función llama al fetch con la URL de la api y genera una lista dinámica en el HTML con todos los Digimons
+- [search()] Esta función se llamada desde listado y llama a la Api pero con el nombre ingresado en el input
+- [createDigimon] Esta función exist en digimonList() y search(), pero con la diferencia que en search, solo crea un Digimon y lo envía a la tabla de bootstrap como "filtro"
 
 ## Adicionales
 
