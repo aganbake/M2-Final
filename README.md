@@ -15,7 +15,9 @@ En Listado podemos ver todos los pokemones además de poder filtrar por nombre
 - [Bootstrap 5.2.3]
 - [JQuery 3.6.3]
 - [FontAwesome]
-- [Google Fonts 'Ubuntu'] \*[Fetch]
+- [Google Fonts 'Ubuntu']
+
+* [Fetch]
 
 ### Script
 
@@ -31,3 +33,7 @@ En Listado podemos ver todos los pokemones además de poder filtrar por nombre
 ## Adicionales
 
 Finalmente añadi un "go up" para poder pasearse por el listado comodamente, ya que existen más de 200 Digimon para explorar.
+
+## Repositorio
+
+git clone https://github.com/aganbake/M2-Final.git

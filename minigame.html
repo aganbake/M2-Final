@@ -21,7 +21,7 @@
     <!-- Custom Script -->
     <script src="https://kit.fontawesome.com/b1b917e349.js" crossorigin="anonymous"></script>
     <script src="assets/script/index.js"></script>
-    <script>digimonList()</script>
+    <script>startGame()</script>
 </head>
 
 <body>
@@ -33,7 +33,7 @@
         <div class="container-fluid">
             <!-- Nav Bar -->
             <nav class="navbar navbar-expand-lg navbar-dark">
-                <a class="navbar-brand" href="#">Digivice</a>
+                <a class="navbar-brand d-none" href="#">Digivice</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -49,41 +49,72 @@
                         <a class="nav-link" href="minigame.html">Batalla</a>
                     </ul>
                 </div>
+
             </nav>
             <!-- Title -->
             <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="big-heading"></h1>
+                </div>
                 <div class="col-lg-12">
-                    <img src="assets/images/Digivice-logo.png" alt="Logo-Digimon" class="logo">
+                    <img src="assets/images/Logo-Digimon.png" alt="Logo-Digimon" class="logo">
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- All Digimons -->
-
+    <!-- Batalla Digimons -->
     <section class="mid-section">
-        <div class="container-fluid table-responsive">
-            <form class="d-flex row row-cols-lg-auto" role="search">
-                <input class="form-control" type="search" placeholder="Buscar Digimon" aria-label="Search"
-                    id="needDigimon">
-                <button class="btn btn-outline-dark" type="button" onclick="search()">Buscar</button>
-                <button class="btn btn-outline-dark" type="button" onclick="digimonList()">Volver</button>
-            </form>
-            <table class="table align-middle table-striped" data-search="true" data-custom-search="customSearch">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Nivel</th>
-                        <th scope="col">Digimon</th>
-                    </tr>
-                </thead>
-                <tbody id="tbody">
-                </tbody>
-            </table>
+        <div class="container text-center">
+            <h1 class="big-heading">Batalla Digimon, Mejor de 3</h1>
+            <h1 class="big-heading" id="Winner"></h1>
+            <!-- <div class="row justify-content-between">
+                <div class="col">
+                    <a class="nav-link" href="minigame.html">Nuevos Digimones acá</a>
+                </div> -->
+            <!-- </div> -->
+            <div class="row justify-content-between">
 
+                <div class="col col-lg-5 col-sm-12">
+                    <h2 id="Digimon-B0">
+                        <h2 id="puntaje0"></h2>
+                        <h2 id="winner0"></h2>
+                    </h2>
+                </div>
+                <div class="col col-lg-2 col-12">
+                    <h1>VS</h1>
+                </div>
+                <div class="col col-lg-5 col-sm-12">
+                    <h2 id="Digimon-B1">
+                        <h2 id="puntaje1"></h2>
+                        <h2 id="winner1"></h2>
+                    </h2>
+                </div>
+
+
+            </div>
+            <div class="row justify-content-between">
+                <div class="col col-5 dice">
+                    <img src="assets/images/dice6.png" alt="dice1" class="img1">
+                </div>
+                <div class="col col-lg-2">
+
+                </div>
+                <div class="col col-5 dice">
+                    <img src="assets/images/dice6.png" alt="dice2" class="img2">
+                </div>
+
+            </div>
+            <div class="row justify-content-between">
+
+                <div class="col">
+                    <button class="btn btn-outline-dark btn-lg" onclick="rollDice()">Lanza</button>
+                </div>
+
+            </div>
 
         </div>
+
+
     </section>
 
 
@@ -98,8 +129,6 @@
         </div>
 
     </section>
-
-
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

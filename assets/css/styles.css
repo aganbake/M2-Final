@@ -63,7 +63,33 @@ h3 {
   margin: 20px;
 }
 
+#needDigimon {
+  width: 25%;
+}
+
+form {
+  padding-bottom: 5%;
+}
+
+/* MINIGAME */
+
+.img1,
+.img2 {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+  width: 25%;
+}
+
+.dice {
+  text-align: center;
+  display: inline-block;
+}
+
 /* CONFIG */
+
+.col {
+  padding: 20px;
+}
 
 .btn-back-to-top {
   position: fixed;
@@ -84,6 +110,10 @@ h3 {
 .container-fluid {
   padding: 7% 10%;
 }
+.container {
+  padding: 5% 0%;
+  margin: auto;
+}
 
 @media (max-width: 1028px) {
   #title {
@@ -101,5 +131,9 @@ h3 {
   }
   #footer {
     padding: 20%;
+  }
+
+  #needDigimon {
+    width: 100%;
   }
 }
