@@ -1,5 +1,4 @@
 const BASE_URL = "https://digimon-api.vercel.app/api/digimon";
-var digimon;
 let digi = 0;
 let puntaje0 = 0;
 let puntaje1 = 0;
@@ -69,7 +68,6 @@ function search() {
   fetch(BASE_URL + "/name/" + name)
     .then((results) => results.json())
     .then((data) => {
-      console.log(data);
       createDigimon(data);
     })
     .catch((error) => console.log(error));
@@ -139,16 +137,18 @@ function rollDice() {
   }
 
   if (puntaje0 === 3) {
+    $("#mainText").css("display", "none");
     let finalName = document.querySelector("#Digimon-B0").querySelector("h1");
-    console.log(finalName.value);
     let h1 = document.querySelector("#Winner");
     h1.innerHTML = `Ganador: ${finalName.textContent}`;
+    button();
   }
   if (puntaje1 === 3) {
+    $("#mainText").css("display", "none");
     let finalName = document.querySelector("#Digimon-B1").querySelector("h1");
-    console.log(finalName.value);
     let h1 = document.querySelector("#Winner");
     h1.innerHTML = `Ganador: ${finalName.textContent}`;
+    button();
   }
 
   if (puntaje0 === 4 || puntaje1 === 4) {
@@ -156,12 +156,28 @@ function rollDice() {
   }
 }
 
+function button() {
+  let tag = document.querySelector("#button");
+  if (tag.innerHTML === "Nueva Partida") {
+    window.location.href = "minigame.html";
+  }
+
+  if (puntaje0 === 3 || puntaje1 === 3) {
+    let tag = document.querySelector("#button");
+    tag.innerHTML = "Nueva Partida";
+  } else {
+    rollDice();
+  }
+}
+
 $(document).ready(function () {
   $(window).scroll(function () {
     if ($(this).scrollTop() > 1000) {
       $("#btn-back-to-top").fadeIn();
+      $(".logo-game").css("display", "none");
     } else {
       $("#btn-back-to-top").fadeOut();
+      $(".logo-game").css("display", "inline");
     }
   });
   $("#btn-back-to-top").click(function () {
